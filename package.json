@@ -1,0 +1,18 @@
+{
+  "name": "webapplication",
+  "version": "1.0.0",
+  "description": "We've made some big updates in this release, so it’s **important** that you spend a few minutes to learn what’s new.",
+  "main": "index.js",
+  "dependencies": {
+    "copy-dir": "^0.3.0",
+    "lodash": "^4.17.3",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "preinstall": "node bin/preinstall",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
