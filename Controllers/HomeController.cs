@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace WebApplication.Controllers
 {
@@ -16,8 +17,15 @@ namespace WebApplication.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
-            return View();
+            Dictionary<string, string> appScripts;
+            string mainScriptPath = "";
+            if (Models.AssetManifest.LoadJson.TryGetValue("myApp", out appScripts)) // Returns true.
+            {
+               appScripts.TryGetValue("main.js", out mainScriptPath);
+            }
+            ViewData["JsonOutput"]="~/components/myapp/" + mainScriptPath;
+            string model = "/components/myApp/" + mainScriptPath;
+            return View("About", model);
         }
 
         public IActionResult Contact()

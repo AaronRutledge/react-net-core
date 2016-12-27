@@ -1,16 +1,18 @@
+@Model string
 @{
     ViewData["Title"] = "About";
 }
-@section AddToHead{
+<!--@section AddToHead{
     <link href="@Url.Content("~/components/my-app/static/css/main.9a0fe4f1.css")" rel="stylesheet" type="text/css" />
-}
+}-->
+
 <h2>@ViewData["Title"].</h2>
 <h3>@ViewData["Message"]</h3>
 
 <p>Use this area to provide additional information.</p>
 <p>My component should load here:</p>
+
 <div id="root" />
-<script type="text/javascript" src="~/components/my-app/static/js/main.cf0e856f.js"></script>
+<script type="text/javascript" src="@Model"></script>
 
 <div id="root2" />
-<script type="text/javascript" src="~/components/my-app-2/static/js/main.ea149800.js"></script>

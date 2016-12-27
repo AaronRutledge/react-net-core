@@ -21,7 +21,7 @@ fs
         //exec(command, [options], callback);
         console.log("Building " + component);
 
-        componentManifest[component] = '~/wwwroot/components/' + component + '/asset-manifest.json'; 
+        componentManifest[component] = 'wwwroot/components/' + component + '/asset-manifest.json'; 
         
         exec('npm i', {
             cwd: componentPath
