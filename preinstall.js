@@ -4,7 +4,7 @@ var join = require('path').join
 var cp = require('child_process')
 var copydir = require('copy-dir');
 var componentManifest = {};
-var componentLibrary = resolve(__dirname, '../Components/');
+var componentLibrary = resolve(__dirname, './Components/');
 var manifestPath = './wwwroot/components/AppManifests.json';
 
 fs
